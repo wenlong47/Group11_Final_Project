@@ -12,3 +12,4 @@ Furthermore, we created a standardized date variable. This standardization was n
 **Heat Maps:** By mapping collision hotspots, we tried to identify shifts in high-incident areas pre and post-lockdown, indicating changes in traffic patterns and potentially altered commuting habits.  
 **Comperative Analysis:** We use bar charts  and stacked area charts to compare  different variables year-over-year, to highlight any variations in collision types and severety, with an increase in a certain collision type post lockdown.  
 **Conclusion**  
+Our analysis revealed a nuanced landscape of traffic collisions in NYC's post-COVID era, showing a decrease in incidents yet an uptick in driver fatalities. This complexity signals a need for further investigation into the intricate relationship between pandemic policies and road safety, informing future urban planning and safety measures.
