@@ -10,3 +10,5 @@ Furthermore, we created a standardized date variable. This standardization was n
 **Visulisations**  
 **Time-Series:** Using time-series graphs, we ca see that the number of crashes went downn, immediately after Covid-19 was declared a pandemic. Even though, the numbers of collisions went up again, after 2020, they are still significantly below pre-Covid numbers. 
 **Heat Maps:** By mapping collision hotspots, we tried to identify shifts in high-incident areas pre and post-lockdown, indicating changes in traffic patterns and potentially altered commuting habits.
+**Comperative Analysis:** We use bar charts  and stacked area charts to compare  different variables year-over-year, to highlight any variations in collision types and severety, with an increase in a certain collision type post lockdown.  
+**Conclusion**  
