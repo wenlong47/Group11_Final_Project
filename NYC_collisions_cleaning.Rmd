@@ -1,0 +1,73 @@
+---
+title: "Crashes cleaning"
+author: "Group 11"
+date: "2023-11-15"
+output: html_document
+---
+
+GitHub repo: https://github.com/wenlong47/Group11_Final_Project
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r, load_libraries, include = FALSE}
+
+# load the libraries
+library(readr)
+library(dplyr)
+library(lubridate)
+
+```
+
+```{r}
+
+# Reading the dataset and displaying it for an initial inspection
+Motor_Vehicle_Collisions <- read_csv("data/NYCMotor/Motor_Vehicle_Collisions.csv")
+View(Motor_Vehicle_Collisions)
+
+```
+
+```{r}
+
+# Convert 'CRASH DATE' to Date format
+Motor_Vehicle_Collisions$`CRASH DATE` <- as.Date(Motor_Vehicle_Collisions$`CRASH DATE`, format = "%m/%d/%Y")
+
+# Filter for the years 2018 to 2022 (inclusive)
+Motor_Vehicle_Collisions_filtered <- Motor_Vehicle_Collisions %>%
+  filter(year(`CRASH DATE`) >= 2017 & year(`CRASH DATE`) <= 2022)
+
+# Remove duplicate rows
+Motor_Vehicle_Collisions_filtered <- distinct(Motor_Vehicle_Collisions_filtered)
+
+# Calculate the proportion of NAs for each column
+na_proportion <- sapply(Motor_Vehicle_Collisions_filtered, function(x) sum(is.na(x)) / length(x))
+
+# Names of columns with less than or equal to 80% NAs (originally stated 90%, but 0.8 suggests 80%)
+cols_to_keep <- names(na_proportion[na_proportion <= 0.8])
+
+# Subset the dataframe to keep only the columns with less than or equal to 80% NAs
+Motor_Vehicle_Collisions_filtered <- Motor_Vehicle_Collisions_filtered[cols_to_keep]
+
+# Check the structure of the filtered data
+str(Motor_Vehicle_Collisions_filtered)
+
+```
+
+```{r}
+
+#Checking how many values are missing in every variable
+colSums(is.na(Motor_Vehicle_Collisions_filtered))
+
+```
+
+
+```{r}
+
+# Write the cleaned data to a new CSV file
+write_csv(Motor_Vehicle_Collisions_filtered, "data/NYCMotor/Cleaned_Motor_Vehicle_Collisions_filterd.csv")
+
+```
+
+
