@@ -8,7 +8,7 @@ We implemented a structured approach to process and analyze the New York City mo
 To ensure the quality and reliability of our analysis, we undertook a thorough data cleaning process. This involved removing variables that were missing 80% or more of their values, to maintain the integrity of our dataset. Additionally, we eliminated duplicate values to avoid skewing our results with redundant data.
 Furthermore, we created a standardized date variable. This standardization was necessary to facilitate a consistent and accurate temporal analysis of the data. By having a uniform date format, we were able to conduct more precise comparisons and trend analyses over the selected time period.  
 **Visulisations**  
-**Time-Series:** Using time-series graphs, we ca see that the number of crashes went downn, immediately after Covid-19 was declared a pandemic. Even though, the numbers of collisions went up again, after 2020, they are still significantly below pre-Covid numbers. 
-**Heat Maps:** By mapping collision hotspots, we tried to identify shifts in high-incident areas pre and post-lockdown, indicating changes in traffic patterns and potentially altered commuting habits.
+**Time-Series:** Using time-series graphs, we ca see that the number of crashes went downn, immediately after Covid-19 was declared a pandemic. Even though, the numbers of collisions went up again, after 2020, they are still significantly below pre-Covid numbers.  
+**Heat Maps:** By mapping collision hotspots, we tried to identify shifts in high-incident areas pre and post-lockdown, indicating changes in traffic patterns and potentially altered commuting habits.  
 **Comperative Analysis:** We use bar charts  and stacked area charts to compare  different variables year-over-year, to highlight any variations in collision types and severety, with an increase in a certain collision type post lockdown.  
 **Conclusion**  
